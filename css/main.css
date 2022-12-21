@@ -1,0 +1,129 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(104, 83, 223);
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+.sidenav .faceicon {
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 180px; /* Same as the width of the sidenav */
+  padding: 0px 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.underconst {
+    padding-top: 100px;
+}
+
+.logentry {
+        
+}
+
+li+ul {padding-left: 20px;}
+
+.gallery{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+
+  .postPreviewBox{
+     width: 200px;
+    margin: 8px 0;
+    border: 1px solid #777;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  .postPreviewBox img{
+    width: 100%;
+    height: 184px;
+    border: 1px solid #777;
+    object-fit: cover;
+  }
+  .postPreviewBox figcaption{
+    text-align: center;
+    padding: 8px 4px;
+  }
+
+  .diagram {
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  .diagram figcaption {
+    padding: 8px 4px;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    font-size: small;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #7a7a7a;
+    color: white;
+  }
+
+  pre {
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-left: 3px solid #dfc114;
+    color: #7a7a7a;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
