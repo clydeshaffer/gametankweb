@@ -11,6 +11,4 @@
     <a href="https://github.com/clydeshaffer/gametankemulator">Emulator Repo</a>
     <br>
     <a href="https://youtube.gametank.zone">Youtube</a>
-
-    <img class="faceicon" src="/img/face-only.png" width="100" />
 </div>
