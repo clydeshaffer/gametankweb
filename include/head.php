@@ -1,7 +1,7 @@
 <head>
     <title><?php echo $title; ?></title>
     <?php
-    	$cssfile = '/css/main.css?ver=' . md5_file($_SERVER['DOCUMENT_ROOT'].'/css/clyde.css');
+    	$cssfile = '/css/main.css?ver=' . md5_file($_SERVER['DOCUMENT_ROOT'].'/css/main.css');
     ?>
     <link rel="stylesheet" type="text/css" href="<?php echo $cssfile; ?>"/>
 </head>
