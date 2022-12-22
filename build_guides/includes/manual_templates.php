@@ -4,6 +4,15 @@ function setImage(stepNumber, newSrc) {
     document.getElementById("stepImage" + stepNumber).src = newSrc;
 }
 
+function zoomImage(srcStep) {
+    var srcImg = document.getElementById("stepImage" + srcStep);
+    var zoomModal = document.getElmentById("zoomModal");
+    zoomModal.src = srcImg.src;
+    zoomModal.onload = function() {
+        zoomModal.style.display = 'block';
+    }
+}
+
 </script>
 
 <?php
@@ -18,7 +27,7 @@ function buildstep($title, $bulletpoints, $images) {
         <a class="stepTitle" href="#step<?=$stepNumber?>" id="step<?=$stepNumber?>"><h2>Step <?=$stepNumber?>: <?=$title?></h2></a>
         <div class="stepContent">
             <div class="stepImages">
-                <img id="stepImage<?=$stepNumber?>" class="stepBigImage" src="<?=$images[0]?>">
+                <img id="stepImage<?=$stepNumber?>" class="stepBigImage" src="<?=$images[0]?>" onclick="zoomImage('<?=$stepNumber?>');">
                 <div class="stepLittleImageRow">
                 <?php
                     if(count($images) > 1) {
@@ -44,6 +53,17 @@ function buildstep($title, $bulletpoints, $images) {
             </div>
         </div>
         <hr>
+    </div>
+    <?php
+}
+
+function zoomModal() {
+    ?>
+    <div class="zoomModal" id="zoomModal">
+        <img class="zoomImg">
+        <div class="modalX" onclick="document.getElementById('zoomModal').removeAttribute('style');">
+            X
+        </div>
     </div>
     <?php
 }

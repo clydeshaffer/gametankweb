@@ -162,3 +162,28 @@ li+ul {padding-left: 20px;}
 .stepContent {
   display: flex;
 }
+
+.zoomModal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+
+.modalImg {
+  padding-top: 2.5%;
+  padding-left: 20%;
+  height: 90%;
+}
+
+.modalX {
+  text-shadow: 3px 4px 7px black;
+  position: absolute;
+  left: 21%;
+  top: 6%;
+  color: white;
+  font-size: xxx-large;
+}
