@@ -5,5 +5,5 @@
     <h2>Try these GameTank games on the web emulator!</h2>
 </center>
 
-<?php postList("games"); ?>
+<?php postList("game_entries"); ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>
