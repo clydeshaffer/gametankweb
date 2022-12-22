@@ -24,7 +24,7 @@ function buildstep($title, $bulletpoints, $images) {
                     if(count($images) > 1) {
                         foreach($images as $image) {
                             ?>
-                            <img class="stepLittleImage" src="<?=$image?>" onclick="setImage(<?=$stepNumber?>,<?=$image?>)">";
+                            <img class="stepLittleImage" src="<?=$image?>" onclick="setImage(<?=$stepNumber?>,'<?=$image?>')">
                             <?php
                         }
                     }
