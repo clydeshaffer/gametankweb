@@ -1,5 +1,5 @@
 <!-- title = Building a GameTank -->
-<!-- thumb = img/v3/v3-mockup_front_sm.png -->
+<!-- thumb = /img/v3/v3-mockup_front_sm.png -->
 <?php $title = "Building a GameTank"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

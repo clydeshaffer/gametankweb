@@ -1,5 +1,5 @@
 <!-- title = Toolchain -->
-<!-- thumb = img/toolchain/spritesheet.PNG -->
+<!-- thumb = /img/toolchain/spritesheet.PNG -->
 <?php $title = "Development Toolchain"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

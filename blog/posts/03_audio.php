@@ -1,5 +1,5 @@
 <!-- title = Soundcard -->
-<!-- thumb = img/sound/card.jpg -->
+<!-- thumb = /img/sound/card.jpg -->
 <?php $title = "Soundcard"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

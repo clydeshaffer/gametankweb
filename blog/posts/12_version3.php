@@ -1,5 +1,5 @@
 <!-- title = Form-Factor Prototype -->
-<!-- thumb = img/v3/v3-mockup_front_sm.png -->
+<!-- thumb = /img/v3/v3-mockup_front_sm.png -->
 <?php $title = "Form-Factor Prototype"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

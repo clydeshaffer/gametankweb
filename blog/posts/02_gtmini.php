@@ -1,5 +1,5 @@
 <!-- title = Cartridge System -->
-<!-- thumb = img/gt_mini/gt_mini_running.jpeg -->
+<!-- thumb = /img/gt_mini/gt_mini_running.jpeg -->
 <?php $title = "Cartridge System"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

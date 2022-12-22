@@ -1,5 +1,5 @@
 <!-- title = Motherboard -->
-<!-- thumb = img/motherboard/mos.jpg -->
+<!-- thumb = /img/motherboard/mos.jpg -->
 <?php $title = "Motherboard"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

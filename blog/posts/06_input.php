@@ -1,5 +1,5 @@
 <!-- title = Controller Input -->
-<!-- thumb = img/input/controller.jpeg -->
+<!-- thumb = /img/input/controller.jpeg -->
 <?php $title = "Controller Input"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

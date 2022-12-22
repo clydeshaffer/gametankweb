@@ -1,5 +1,5 @@
 <!-- title = Second Prototype -->
-<!-- thumb = img/v2/V2-mobo.JPG -->
+<!-- thumb = /img/v2/V2-mobo.JPG -->
 <?php $title = "Second Prototype"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

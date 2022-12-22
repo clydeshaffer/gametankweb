@@ -1,5 +1,5 @@
 <!-- title = System Stabilized -->
-<!-- thumb = img/v3_1/uncased.jpg -->
+<!-- thumb = /img/v3_1/uncased.jpg -->
 <?php $title = "System Stabilized!"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

@@ -1,5 +1,5 @@
 <!-- title = Color Video -->
-<!-- thumb = img/color_vid/grid.jpeg -->
+<!-- thumb = /img/color_vid/grid.jpeg -->
 <?php $title = "Color Video"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

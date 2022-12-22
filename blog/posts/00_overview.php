@@ -1,5 +1,5 @@
 <!-- title = Introduction -->
-<!-- thumb = img/front_sm.jpg -->
+<!-- thumb = /img/front_sm.jpg -->
 <?php $title = "Introduction"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

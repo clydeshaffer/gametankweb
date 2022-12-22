@@ -1,5 +1,5 @@
 <!-- title = B/W Video -->
-<!-- thumb = img/hams.jpg -->
+<!-- thumb = /img/hams.jpg -->
 <?php $title = "B/W Video"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

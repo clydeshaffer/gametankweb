@@ -1,5 +1,5 @@
 <!-- title = Flash Cartridge -->
-<!-- thumb = img/flashcart/flash-card.jpg -->
+<!-- thumb = /img/flashcart/flash-card.jpg -->
 <?php $title = "Flash Cartridge"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

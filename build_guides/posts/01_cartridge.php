@@ -1,5 +1,5 @@
 <!-- title = Building cartridges -->
-<!-- thumb = img/v3/v3-mockup_front_sm.png -->
+<!-- thumb = /img/v3/v3-mockup_front_sm.png -->
 <?php $title = "Building cartridges"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 <h1>Building the cartridges</h1>

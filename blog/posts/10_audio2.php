@@ -1,5 +1,5 @@
 <!-- title = Audio Coprocessor -->
-<!-- thumb = img/v2/V2-audio.jpg -->
+<!-- thumb = /img/v2/V2-audio.jpg -->
 <?php $title = "Audio Coprocessor"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 

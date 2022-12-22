@@ -1,5 +1,5 @@
 <!-- title = VRAM DMA -->
-<!-- thumb = img/vdma/copying.png -->
+<!-- thumb = /img/vdma/copying.png -->
 <?php $title = "VRAM DMA"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 
