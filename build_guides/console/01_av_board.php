@@ -6,14 +6,14 @@
 
 <h1>The A/V Board</h1>
 
-<p>
+<p class="buildStep">
 The A/V Board is responsible for turning data into a picture on the TV and sounds from... also the TV.
 </p>
 
 <?php
-    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
-    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
-    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/001_bypass.jpg','../img/av_board/annotated/002_filtercaps.jpg'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/001_bypass.jpg','../img/av_board/annotated/002_filtercaps.jpg'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/001_bypass.jpg','../img/av_board/annotated/002_filtercaps.jpg'));
 ?>
 
 

@@ -1,5 +1,9 @@
 <script type="text/javascript">
 
+function setImage(stepNumber, newSrc) {
+    document.getElementById("stepImage" + stepNumber).src = newSrc;
+}
+
 </script>
 
 <?php
@@ -10,15 +14,19 @@ function buildstep($title, $bulletpoints, $images) {
     global $stepNumber;
     $stepNumber++;
     ?>
-    <div class="buildstep">
+    <div class="buildStep">
         <a class="stepTitle" href="#step<?=$stepNumber?>"><h2>Step <?=$stepNumber?>: <?=$title?></h2></a>
         <div class="stepContent">
             <div class="stepImages">
-                <img class="stepBigImage" src="<?=$images[0]?>">
+                <img id="stepImage<?=$stepNumber?>" class="stepBigImage" src="<?=$images[0]?>">
                 <div class="stepLittleImageRow">
                 <?php
-                    foreach($images as $image) {
-                        echo "<img class=\"stepLittleImage\" src=\"" . $image . "\">";
+                    if(count($images) > 1) {
+                        foreach($images as $image) {
+                            ?>
+                            <img class="stepLittleImage" src="<?=$image?>" onclick="setImage(<?=$stepNumber?>,<?=$image?>)">";
+                            <?php
+                        }
                     }
                 ?>
                 </div>

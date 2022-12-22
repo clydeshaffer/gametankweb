@@ -128,7 +128,7 @@ li+ul {padding-left: 20px;}
     word-wrap: break-word;
 }
 
-.stepimages {
+.stepImages {
   position: relative;
   margin-right: 10px;
   width: 60%;
@@ -146,6 +146,7 @@ li+ul {padding-left: 20px;}
 
 .stepBigImage {
   width: 100%;
+  padding-bottom: 16px;
 }
 
 .stepTitle {
