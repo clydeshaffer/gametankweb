@@ -7,10 +7,11 @@
 $stepNumber = 0;
 
 function buildstep($title, $bulletpoints, $images) {
+    global $stepNumber;
     $stepNumber++;
     ?>
     <div class="buildstep">
-        <a class="steptitle" href="#step<?=$stepNumber?>">Step <?=$stepNumber?>: <?=$title?></a>
+        <a class="steptitle" href="#step<?=$stepNumber?>"><h2 class="stepTitle">Step <?=$stepNumber?>: <?=$title?></h2></a>
         <div class="stepcontent">
             <div class="stepimages">
                 <img class="stepBigImage" src="<?=$images[0]?>">
@@ -28,7 +29,7 @@ function buildstep($title, $bulletpoints, $images) {
                     foreach($bulletpoints as $bulletpoint) {
                         echo '<li>';
                         echo $bulletpoint;
-                        echo '</li>';
+                        echo '</li><br>';
                     }
                 ?>
                 </ul>

@@ -5,7 +5,6 @@
 <?php include '../includes/manual_templates.php'?>
 
 <h1>The A/V Board</h1>
-<h2>AKA the Signals Board</h2>
 
 <p>
 The A/V Board is responsible for turning data into a picture on the TV and sounds from... also the TV.
