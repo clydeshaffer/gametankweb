@@ -1,4 +1,4 @@
-<!-- title = Building a GameTank -->
+<!-- title = Introduction -->
 <!-- thumb = /img/v3/v3-mockup_front_sm.png -->
 <?php $title = "Building a GameTank"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
@@ -39,7 +39,7 @@ If Bulk Add fails then <input type="submit" value="Generate Digi-Key CSV">, save
 <textarea id="mouser_order" name="mouser_order" rows="4" cols="40">
 </textarea>
 
-<script type="text/javascript" src="../js/ordertool.js"></script>
+<script type="text/javascript" src="/js/ordertool.js"></script>
 
 <p>
 Gerber file packages can be found in the <a href="https://github.com/clydeshaffer/gametank/tree/main/Production/Combined">git repo</a>.

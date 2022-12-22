@@ -127,3 +127,21 @@ li+ul {padding-left: 20px;}
     display: block;
     word-wrap: break-word;
 }
+
+.stepimages {
+  position: relative;
+  margin-right: 10px;
+  width: 60%;
+}
+
+.steptext {
+  width: 40%;
+}
+
+.stepLittleImage {
+  height: 100px;
+}
+
+.stepBigImage {
+  width: 100%;
+}
