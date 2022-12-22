@@ -68,7 +68,7 @@ function zoomModalTemplate() {
     <script>
         document.onkeydown = function(evt) {
             evt = evt || window.event;
-            if (evt.keycode == 27) {
+            if (evt.keyCode == 27) {
                 document.getElementById('zoomModal').removeAttribute('style');
             }
         }
