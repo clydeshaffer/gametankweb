@@ -432,6 +432,8 @@
     array(
         '../img/av_board/annotated/051_chip_6502.jpg'
     ));
+
+    zoomModalTemplate();
 ?>
 
 

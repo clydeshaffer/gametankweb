@@ -57,7 +57,7 @@ function buildstep($title, $bulletpoints, $images) {
     <?php
 }
 
-function zoomModal() {
+function zoomModalTemplate() {
     ?>
     <div class="zoomModal" id="zoomModal">
         <img class="zoomImg">
