@@ -12,9 +12,9 @@ The A/V Board is responsible for turning data into a picture on the TV and sound
 </p>
 
 <?php
-    buildstep('Before we begin', array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'), array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'));
-    buildstep('Before we begin', array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'), array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'));
-    buildstep('Before we begin', array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'), array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
+    buildstep('Before we begin', array('I was told to do shorter components first.', 'This works well when placing components, flipping the whole board with a flat surface, then soldering.'), array('../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg','../img/av_board/annotated/000_board.jpg'));
 ?>
 
 
