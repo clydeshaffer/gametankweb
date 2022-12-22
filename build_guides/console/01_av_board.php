@@ -82,7 +82,7 @@
     buildstep('DIP Sockets (Prelude)',
     array(
         'The next several steps will insert sockets for chips.',
-        'The "wood board" method will still help if the sockets are still the tallest thing on the board.'
+        'The "wood board" method will still help if the sockets are still the tallest thing on the board.',
         'Otherwise, you can bend the socket pins outward to help them stay in the holes before soldering.',
         'BE SURE TO match the divot on the socket to the divot on the printed socket outline!'
     ),
