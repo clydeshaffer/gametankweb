@@ -10,11 +10,6 @@
     }
     .main{
         min-height:100%;
-        background-attachment:scroll;
-        background-image:url(img/controllers-bg.jpg);
-        background-repeat:no-repeat;
-        background-position:bottom left, bottom right;
-        background-size: contain;
     }
 </style>
                 
