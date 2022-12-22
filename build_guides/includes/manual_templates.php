@@ -6,7 +6,7 @@ function setImage(stepNumber, newSrc) {
 
 function zoomImage(srcStep) {
     var srcImg = document.getElementById("stepImage" + srcStep);
-    var zoomModal = document.getElmentById("zoomModal");
+    var zoomModal = document.getElementById("zoomModal");
     zoomModal.src = srcImg.src;
     zoomModal.onload = function() {
         zoomModal.style.display = 'block';
