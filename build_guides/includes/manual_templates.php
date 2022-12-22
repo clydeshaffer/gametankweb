@@ -64,6 +64,15 @@ function zoomModalTemplate() {
             X
         </div>
     </div>
+
+    <script>
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keycode == 27) {
+                document.getElementById('zoomModal').removeAttribute('style');
+            }
+        }
+    </script>
     <?php
 }
 
