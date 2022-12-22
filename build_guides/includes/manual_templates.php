@@ -7,10 +7,9 @@ function setImage(stepNumber, newSrc) {
 function zoomImage(srcStep) {
     var srcImg = document.getElementById("stepImage" + srcStep);
     var zoomModal = document.getElementById("zoomModal");
-    zoomModal.src = srcImg.src;
-    zoomModal.onload = function() {
-        zoomModal.style.display = 'block';
-    }
+    var zoomImage = document.getElementById("zoomImg");
+    zoomImage.src = srcImg.src;
+    zoomModal.style.display = 'block';
 }
 
 </script>
@@ -60,7 +59,7 @@ function buildstep($title, $bulletpoints, $images) {
 function zoomModalTemplate() {
     ?>
     <div class="zoomModal" id="zoomModal">
-        <img class="zoomImg">
+        <img class="zoomImg" id="zoomImg">
         <div class="modalX" onclick="document.getElementById('zoomModal').removeAttribute('style');">
             X
         </div>
