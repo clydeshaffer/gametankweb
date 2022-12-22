@@ -121,7 +121,7 @@
     buildstep('PLCC Sockets (The square ones)',
     array(
         'There are two square sockets to install, which will hold the Video RAM and Audio RAM chips.',
-        'Be sure to match the direction of the arrows on the sockets to the arrows printed on the board.'
+        'Be sure to match the direction of the arrows on the sockets to the arrows printed on the board.',
         '"Protip rest it on something and get the corners first." - dwbrite'
     ),
     array(
