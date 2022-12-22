@@ -20,7 +20,7 @@
     buildstep('Bypass Capacitors', 
         array(
             'The bypass capacitors smooth out the power supply to each chip.',
-            'Every IC gets a 0.1uF capacitor next to it.'
+            'Every IC gets a 0.1uF capacitor next to it.',
             'There should be 35 of these'
         ),
         array(
