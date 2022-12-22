@@ -46,7 +46,7 @@
             'There are 14 1kOhm resistors to install',
             'The resistors inside the rectangle are meant to be installed vertically, as in the picture.',
             'Cut the resistor leads after soldering',
-            'Bending the legs of horizontal resistors outward can help them stay in place for soldering.'
+            'Bending the legs of horizontal resistors inward can help them stay in place for soldering.'
         ),
         array(
             '../img/av_board/annotated/005_reistors_1k.jpg',
@@ -79,16 +79,24 @@
         '../img/av_board/annotated/009_cap_polarity.jpg'
     ));
 
-    buildstep('DIP16 Sockets',
+    buildstep('DIP Sockets (Prelude)',
     array(
-        'Next insert the DIP16 sockets, which have two rows of eight pins.',
-        'There should be 11 of these on the A/V board.',
-        'If the wood board method isn\'t enough, you can bend the socket pins outward to help them stay in the holes before soldering.',
+        'The next several steps will insert sockets for chips.',
+        'The "wood board" method will still help if the sockets are still the tallest thing on the board.'
+        'Otherwise, you can bend the socket pins outward to help them stay in the holes before soldering.',
         'BE SURE TO match the divot on the socket to the divot on the printed socket outline!'
     ),
     array(
-        '../img/av_board/annotated/012_sockets_2x8.jpg',
         '../img/av_board/annotated/013_socket_legs.jpg'
+    ));
+
+    buildstep('DIP16 Sockets',
+    array(
+        'Next insert the DIP16 sockets, which have two rows of eight pins.',
+        'There should be 11 of these on the A/V board.'
+    ),
+    array(
+        '../img/av_board/annotated/012_sockets_2x8.jpg'
     ));
 
     buildstep('DIP14 Sockets',
@@ -208,7 +216,7 @@
         'The chip names are printed on the the PCB, but they are now obscured by sockets.',
         'A <a href="https://github.com/clydeshaffer/gametank/blob/main/Docs/signals_board_layout_WIP.pdf">layout diagram</a> will come in handy for finding where chips live.',
         'It will also help greatly to have a Lead Forming Tool to straighten the chip pins, as they ship with their legs slightly bowed outward.',
-        'Lead Forming Tools can be purchased commercially, or produced on a 3D printer.',
+        'Lead Forming Tools can be <a href="https://www.jameco.com/z/ICS-01-R-Jameco-BenchPro-IC-Pin-Straightener-for-0-300-and-0-600-Wide-ICs_99363.html">purchased commercially</a>, or <a href="https://www.thingiverse.com/thing:3121797">produced on a 3D printer.</a>',
         'Simply place the chip on top of the middle bar and squeeze. The chip will now fit a socket perfectly.'
     ),
     array(
