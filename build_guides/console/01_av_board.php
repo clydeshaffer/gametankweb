@@ -166,13 +166,262 @@
         '../img/av_board/annotated/023_header_6pin.jpg'
     ));
 
-    buildstep('All sockets have been installed!',
+    buildstep('All sockets have been installed',
     array(
-        'Pat yourself on the back',
-        'You\'re done soldering! ...On the A/V Board, at least ;)'
+        'Pat yourself on the back!'
     ),
     array(
         '../img/av_board/annotated/024_sockets_all.jpg',
+    ));
+
+    buildstep('Assemble the Video Buffer Amp',
+    array(
+        'If you didn\'t request a pre-soldered module, this will be one of the two surface-mount soldering tasks in the console.',
+        'This will use the small PCB with THS7374 printed on it, as well as the chip with the same name.',
+        'Flux and low-temperature solder paste are recommended',
+        'Align the THS7374 to the outline, matching the divot on the chip to the printed dot on the board.',
+        'This can be soldered with an iron, hot air gun, oven, or hot plate.',
+        'If any pins are bridged, add flux and use copper braid to remove excess solder.',
+        'C1 and the resistor outline on this module can be left vacant with no issues.',
+        'Then solder on the 6-pin male header to the BOTTOM of the board.'
+    ),
+    array(
+        '../img/av_board/annotated/025_video_buffer.jpg',
+        '../img/av_board/annotated/026_video_buffer_pins.jpg',
+    ));
+
+    buildstep('Install the Video Buffer Amp',
+    array(
+        'Insert the video buffer amp module into the 6-pin female header, with the arrow pointing towards the front of the console.',
+        'It will hang over the electrolytic capacitor next to it, but there should be enough clearance.'
+    ),
+    array(
+        '../img/av_board/annotated/027_buffer_installed.jpg',
+        '../img/av_board/annotated/028_buffer_installed_close.jpg',
+        '../img/av_board/annotated/029_buffer_installed_side.jpg',
+    ));
+
+    buildstep('Inserting Chips (Prelude)',
+    array(
+        'Next you\'ll be inserting chips into all these sockets you just soldered',
+        'The chip names are printed on the the PCB, but they are now obscured by sockets.',
+        'A <a href="https://github.com/clydeshaffer/gametank/blob/main/Docs/signals_board_layout_WIP.pdf">layout diagram</a> will come in handy for finding where chips live.',
+        'It will also help greatly to have a Lead Forming Tool to straighten the chip pins, as they ship with their legs slightly bowed outward.',
+        'Lead Forming Tools can be purchased commercially, or produced on a 3D printer.',
+        'Simply place the chip on top of the middle bar and squeeze. The chip will now fit a socket perfectly.'
+    ),
+    array(
+        '../img/misc/ic_lead_former_commercial.jpg',
+        '../img/misc/ic_lead_former_printed.jpg',
+    ));
+
+    buildstep('Gather your chips',
+    array(
+        '1x 74HC164N/E',
+        '1x HC151E (74LS151N)',
+        '2x HC08E (74LS08N)',
+        '2x HC257N',
+        '1x HC564N/E',
+        '2x HC573N',
+        '1x 7524CN/JN (AD7524JN)',
+        '3x HCT74N (74S74N/74LS74N/) ',
+        '1x AC32N (74LS32N)',
+        '5x HC00E (7400N)',
+        '1x HC40103E (CD40103)',
+        '1x HC86E (7486N)',
+        '1x HCT30E (74AS30N)',
+        '4x HC4040E (4040N)',
+        '1x HC04E(7404N)',
+        '2x HC161N (74HC161)',
+        '1x LM358'
+    ),
+    array(
+        '../img/misc/chip_pile.jpg',
+    ));
+
+    buildstep('1 x 74HC151',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/030_chip_74_151.jpg'
+    ));
+
+    buildstep('1 x 74HC30',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/031_chip_74_30.jpg'
+    ));
+
+    buildstep('5 x 74HC00',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/032_chip_74_00.jpg'
+    ));
+
+    buildstep('1 x 74HC04',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/033_chip_74_04.jpg'
+    ));
+
+    buildstep('3 x 74HC74',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/034_chip_74_74.jpg'
+    ));
+
+    buildstep('2 x 74HC161',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.',
+        'In your overall parts order is at least one 74AC161, but don\'t use it here! Save it for slot U$6 on the main board!'
+    ),
+    array(
+        '../img/av_board/annotated/035_chip_74_161.jpg'
+    ));
+
+    buildstep('1 x 74HC32',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/036_chip_74_32.jpg'
+    ));
+
+    buildstep('2 x 74HC08',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/037_chip_74_08.jpg'
+    ));
+
+    buildstep('1 x 74HC86',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/038_chip_74_86.jpg'
+    ));
+
+    buildstep('1 x 74HC164',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/039_chip_74_164.jpg'
+    ));
+
+    buildstep('4 x 74HC4040',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/040_chip_74_4040.jpg'
+    ));
+
+    buildstep('1 x 74HC40103',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/041_chip_74_40103.jpg'
+    ));
+
+    buildstep('2 x 74HC573',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/042_chip_74_573.jpg'
+    ));
+
+    buildstep('1 x TLC7524',
+    array(
+        'Might also be called AD7524'
+    ),
+    array(
+        '../img/av_board/annotated/043_chip_TLC_7524.jpg'
+    ));
+
+    buildstep('1 x 74HC564',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/044_chip_74_564.jpg'
+    ));
+
+    buildstep('2 x 74HC257',
+    array(
+        'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
+        'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
+    ),
+    array(
+        '../img/av_board/annotated/045_chip_74_257.jpg'
+    ));
+
+    buildstep('1 x LM358',
+    array(
+        'Audio buffer op-amp',
+    ),
+    array(
+        '../img/av_board/annotated/046_chip_LM_358.jpg'
+    ));
+
+    buildstep('IDT7007 (Video RAM)',
+    array(
+        'Larger of the two square chips',
+        'BE SURE TO align the dot on one edge of the chip to the direction of the arrow on the socket',
+        'If inserted wrong you will need a special PLCC Removal Tool to extract it.',
+        'To insert, just make sure the dot and the pins are lined up and press down firmly.'
+    ),
+    array(
+        '../img/av_board/annotated/048_chip_VRAM_close.jpg',
+        '../img/av_board/annotated/049_chip_VRAM_installed_close.jpg',
+        '../img/av_board/annotated/047_chip_VRAM.jpg'
+    ));
+
+    buildstep('IDT7137 (Audio RAM)',
+    array(
+        'Smaller of the two square chips',
+        'Same warnings and advice for IDT7007 apply',
+        'Double check the direction of the arrow, it isn\'t the same as the other socket!'
+    ),
+    array(
+        '../img/av_board/annotated/050_chip_ARAM.jpg'
+    ));
+
+    buildstep('6502 (Audio Coprocessor)',
+    array(
+        'One of the two 6502 chips in your parts order',
+        'Not the 6522 VIA which is also a 40 pin DIP chip',
+        'With this installed your A/V Board is complete! Well done!'
+    ),
+    array(
+        '../img/av_board/annotated/051_chip_6502.jpg'
     ));
 ?>
 
