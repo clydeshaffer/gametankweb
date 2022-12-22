@@ -82,7 +82,7 @@
     array(
         'Next insert the DIP16 sockets, which have two rows of eight pins.',
         'There should be 11 of these on the A/V board.',
-        'If the wood board method isn\'t enough, you can bend the socket pins outward to help them stay in the holes before soldering.'
+        'If the wood board method isn\'t enough, you can bend the socket pins outward to help them stay in the holes before soldering.',
         'BE SURE TO match the divot on the socket to the divot on the printed socket outline!'
     ),
     array(
