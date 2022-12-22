@@ -11,9 +11,9 @@ function buildstep($title, $bulletpoints, $images) {
     $stepNumber++;
     ?>
     <div class="buildstep">
-        <a class="steptitle" href="#step<?=$stepNumber?>"><h2 class="stepTitle">Step <?=$stepNumber?>: <?=$title?></h2></a>
-        <div class="stepcontent">
-            <div class="stepimages">
+        <a class="stepTitle" href="#step<?=$stepNumber?>"><h2>Step <?=$stepNumber?>: <?=$title?></h2></a>
+        <div class="stepContent">
+            <div class="stepImages">
                 <img class="stepBigImage" src="<?=$images[0]?>">
                 <div class="stepLittleImageRow">
                 <?php

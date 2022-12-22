@@ -157,3 +157,7 @@ li+ul {padding-left: 20px;}
   padding-right: 20%;
   padding-left: 20%;
 }
+
+.stepContent {
+  display: flex;
+}
