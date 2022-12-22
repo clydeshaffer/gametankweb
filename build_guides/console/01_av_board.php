@@ -1,15 +1,16 @@
-<!-- title = Introduction -->
+<!-- title = A/V Board -->
 <!-- thumb = /build_guides/img/av_board/original/051_chip_6502.jpg -->
 <?php $title = "Building a GameTank"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 <?php include '../includes/manual_templates.php'?>
 
 <h1>The A/V Board</h1>
+<h3>Photos by @dwbrite</h3>
 
 <?php
     buildstep('Before we begin', 
     array(
-        'This page will walk you throuhg building the A/V Board.',
+        'This page will walk you through building the A/V Board, which generates the signals that go out to the TV.',
         'In general we\'ll be placing the shorter components first.',
         'It will help to have a flat board handy, about the same size as the PCB. This can be used to keep parts from falling out as you flip the whole board to solder components.'
     ),
