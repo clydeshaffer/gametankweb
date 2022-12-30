@@ -51,13 +51,11 @@
         No scouring eBay for old-stock chips is needed: You can source all the components brand new on Digi-Key and Mouser.
     </p>
     <center>
-        <h2>Of course, that's not to say the <a href="https://github.com/clydeshaffer/GameTankEmulator">emulator</a> is unsupported.</h2>
+        <h2>There's an <a href="https://github.com/clydeshaffer/GameTankEmulator">emulator</a> too!</h2>
     </center>
     <p>
-        Far from it, the emulator is a valuable development tool and a <em>perfectly fine</em> way to play GameTank games.
-        While the physical hardware is intended to be the canonical system, the emulator will likely see more active feature development. This is not only to help it better
-        replicate the behaviors of the physical console, but also to add things like profiling tools and an improved UI. The emulator already has builds for Windows, OSX, and
-        Linux as well as a web browser version that even works on some mobile phones.
+        To make development for the system easier, the GameTank has an emulator with builds for Windows, OSX, and Linux. There's even a version that runs in the browser, and performs decently on certain phones.
+        The emulator is under active development to better replicate the behaviors of the physical console, as well as add-on hardware or special cartridge features.
     </p>
     <center>
         <h2>Interested in developing for the GameTank? Consider joining the <a href="https://discord.gg/8z7hncf4GY">Discord!</a></h2>
