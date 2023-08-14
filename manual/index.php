@@ -342,6 +342,17 @@
     </table>
     <br>
     <p>
+    A typical blitting operation consists of setting each of the paramter registers, and then writing 1 to the START register.
+    However, these parameters are not modified by the Blitter so if you are performing repetitive drawings that have common parameters you can skip setting the reused values for increased performance.
+    </p>
+    <br><br>
+    <p>
+    During a blit the parameters should generally be left alone. If you know the drawing is small you can simply wait by performing some other work on the CPU.
+    For larger or variable sized drawings you can use an IRQ handler to set up blits. You can also execute a WAI ("wait") opcode that will pause the CPU until the next interrupt of any kind occurs.
+    You lose out on parallelism this way, but it makes things very simple. For consecutive small drawings the overhead of managing a drawing queue can waste more time than simply waiting for the blitter to finish.
+    </p>
+    <br><br>
+    <p>
     Setting the higest bit of WIDTH or HEIGHT will invert the output of the GX or GY counters. This is used for drawing a horizontally and/or vertically flipped version of a sprite, though it requires some modification of the GX and GY register values to use for this purpose.
     </p>
     <br><br>
