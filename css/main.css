@@ -35,6 +35,11 @@ body {
   padding: 0px 16px;
 }
 
+.main p, ul {
+  width: 90%;
+  margin: auto;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
