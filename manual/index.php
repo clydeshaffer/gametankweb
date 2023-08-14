@@ -14,7 +14,7 @@
     }
 
     function add_section($title, $anchor, $content) {
-        $sections.push(array("title"=>$title, "anchor"=>$anchor, "content"=>$content));
+        $sections[] = (array("title"=>$title, "anchor"=>$anchor, "content"=>$content));
     }
 
     function emit_table_of_contents() {
