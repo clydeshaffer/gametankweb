@@ -1,5 +1,5 @@
 <!-- title = CPU Board -->
-<!-- thumb = /build_guides/img/cpu_board/annotated/051_chip_6502.jpg -->
+<!-- thumb = /build_guides/img/cpu_board/annotated/053_VIA.jpg -->
 <?php $title = "Building a GameTank"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/head.php'?>
 <?php include '../includes/manual_templates.php'?>
