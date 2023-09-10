@@ -34,7 +34,7 @@
         array(
             '7 x 3.3k resistors (Orange Orange Red)',
             '150 Ohm resistor next to LED1',
-            'Polarity doesn\'t matter but they should be nice and close to the board to leave room for nearby components.'
+            'Polarity doesn\'t matter but they should be nice and close to the board to leave room for nearby components.',
             'After soldering and trimming resistors, set a couple of the trimmed leads aside to help with a later step.'
         ),
         array(
@@ -174,7 +174,7 @@
             '1 x Red button (on/off toggle)',
             'The shorter wire connects to the plus and minus LED terminals',
             'Check the orientation of the header from the earlier Molex Headers step. Ensure that the minus side connects to the grounded flat side of the circular LED marker.',
-            'The longer wire is used for the other two pins (switch) and its polarity doesn\'t really matter,'
+            'The longer wire is used for the other two pins (switch) and its polarity doesn\'t really matter'
         ),
         array(
             '../img/cpu_board/annotated/023_molex_power_led.jpg',
@@ -185,7 +185,7 @@
     buildstep('Mount Power Board', '../img/cpu_board/annotated/026_molex_reset.jpg',
             '../img/cpu_board/annotated/027_molex_reset_detail.jpg',
         array(
-            '1 x Power Board (assembled with separate instructions)'
+            '1 x Power Board (assembled with separate instructions)',
             '2 x trimmed resistor leads from earlier',
             'Align GND and 5V pads and put folded resistor leads through',
             'bend the folded leads outward on the underside so they stay put like binder clips',
@@ -291,7 +291,7 @@
 
     buildstep('3 x 74HC00',
     array(
-        'At the time these photos were taken, one 74HC00 was missing. It will be digitally added to the photo for this step, please imagine it is with us in sucessive photos if it hasn\'t been edited in.'
+        'At the time these photos were taken, one 74HC00 was missing. It will be digitally added to the photo for this step, please imagine it is with us in sucessive photos if it hasn\'t been edited in.',
         'Depending on the market, the HCT or AHC versions might be easier to get. These will work fine.',
         'The text on the chip might end in an N or an E. This denotes what factory they came from and doesn\'t matter here.'
     ),
