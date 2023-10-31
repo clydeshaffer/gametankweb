@@ -19,14 +19,14 @@ There may be some revisions based on parts availabilty or to make assembly easie
 <p>
 <input type="checkbox" id="order_exclude_smds" name="order_exclude_smds">
 <label for="order_exclude_smds">
-    Exclude SMD parts (select if requesting presoldered SMD modules)
+    Exclude SMD parts (select if using the Partial Kit)
 </label>
 </p>
 
 <p>
 <input type="checkbox" id="order_exclude_dprams">
 <label for="order_exclude_dprams">
-    Exclude Dual-Port RAMs (select if requesting from Shaffer's Secret Stash)
+    Exclude Dual-Port RAMs (select if using the Partial Kit)
 </label>
 </p>
 If Bulk Add fails then <input type="submit" value="Generate Digi-Key CSV">, save as a text file, and use their CSV upload.
