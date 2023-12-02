@@ -45,10 +45,13 @@
                     })
                     .then(response => response.blob())
                     .then(blob => {
+                        // Extract the filename without extension
+                        const filenameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
+
                         // Create a link element to trigger the download of the zip file
                         const link = document.createElement('a');
                         link.href = URL.createObjectURL(blob);
-                        link.download = 'gt_embed.zip';
+                        link.download = `${filenameWithoutExtension}_web.zip`;
                         link.click();
                     })
                     .catch(error => console.error('Error:', error));
