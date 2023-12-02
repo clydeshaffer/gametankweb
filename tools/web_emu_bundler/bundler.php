@@ -36,7 +36,7 @@ if(isset($_POST['romfile'])) {
         readfile($serverZipFilename);
 
         // Delete the temporary zip file
-        //unlink($serverZipFilename);
+        unlink($serverZipFilename);
 
     } else {
         echo 'Failed to create zip file.';
