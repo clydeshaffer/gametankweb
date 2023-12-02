@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gametank ROM Embedding Tool</title>
+    <style>
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Gametank ROM Embedding Tool</h1>
+        <h2>Upload ROM File</h2>
+        <form id="uploadForm" enctype="multipart/form-data" action="bundler.php" method="post">
+            <div>
+                <label for="fileInput">Drag & Drop or Choose File:</label>
+                <input type="file" id="fileInput" name="romFile" accept=".txt, .js, .wasm">
+            </div>
+            <button type="button" onclick="uploadFile()">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const base64String = e.target.result.split(',')[1];
+
+                    // Create a FormData object to send the file content
+                    const formData = new FormData();
+                    formData.append('romfile', base64String);
+
+                    // Send a POST request to the bundler.php file
+                    fetch('bundler.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.blob())
+                    .then(blob => {
+                        // Create a link element to trigger the download of the zip file
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(blob);
+                        link.download = 'gt_embed.zip';
+                        link.click();
+                    })
+                    .catch(error => console.error('Error:', error));
+                };
+
+                // Read the file as a data URL
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please choose a file to upload.');
+            }
+        }
+    </script>
+</body>
+</html>
