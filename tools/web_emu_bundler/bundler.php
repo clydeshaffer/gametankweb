@@ -7,21 +7,22 @@ if(isset($_POST['romfile'])) {
     $base64String = $_POST['romfile'];
 
     // Create a unique filename for the zip file on the server
-    $serverZipFilename = 'output_' . uniqid() . '.zip';
+    $serverZipFilename = './output_' . uniqid() . '.zip';
+    register_shutdown_function('unlink', $serverZipFilename);
 
     // Create a new ZipArchive
     $zip = new ZipArchive();
     if ($zip->open($serverZipFilename, ZipArchive::CREATE) === TRUE) {
 
         // Add the JavaScript file with the base64 string verbatim
-        $javascriptContent = file_get_contents('template.js');
+        $javascriptContent = file_get_contents('template/template.js');
         $javascriptContent = str_replace('INSERT_ROMFILE', $base64String, $javascriptContent);
         $zip->addFromString('index.js', $javascriptContent);
 
         // Add other static files
-        $zip->addFile('index.html', 'index.html');
-        $zip->addFile('index.wasm', 'index.wasm');
-        $zip->addFile('commit_hash', 'commit_hash');
+        $zip->addFile('template/index.html', 'index.html');
+        $zip->addFile('template/index.wasm', 'index.wasm');
+        $zip->addFile('template/commit_hash.txt', 'commit_hash.txt');
 
         // Close the zip file
         $zip->close();
@@ -35,7 +36,7 @@ if(isset($_POST['romfile'])) {
         readfile($serverZipFilename);
 
         // Delete the temporary zip file
-        unlink($serverZipFilename);
+        //unlink($serverZipFilename);
 
     } else {
         echo 'Failed to create zip file.';
