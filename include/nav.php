@@ -12,5 +12,7 @@
     <a href="https://github.com/clydeshaffer/gametank">Hardware Repo</a>
     <a href="https://github.com/clydeshaffer/gametankemulator">Emulator Repo</a>
     <br>
+    <a href="https://github.com/clydeshaffer/gametank_sdk">C SDK</a>
+    <br>
     <a href="https://youtube.gametank.zone">Youtube</a>
 </div>
