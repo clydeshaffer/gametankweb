@@ -15,4 +15,6 @@
     <a href="https://github.com/clydeshaffer/gametank_sdk">C SDK</a>
     <br>
     <a href="https://youtube.gametank.zone">Youtube</a>
+    <br>
+    <a href="https://swag.gametank.zone/">Merch Store</a>
 </div>
