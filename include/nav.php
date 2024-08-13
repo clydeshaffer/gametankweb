@@ -16,5 +16,5 @@
     <br>
     <a href="https://youtube.gametank.zone">Youtube</a>
     <br>
-    <a href="https://swag.gametank.zone/">Merch Store</a>
+    <a href="https://swag.gametank.zone/">The GameTank Store</a>
 </div>
