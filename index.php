@@ -16,7 +16,7 @@
 <div style="height:75%; position:relative; max-height:33vw;">
     <div style="height:100%; width:50%; display:inline-block">
     </div>
-    <img style="height:100%; display:inline-block" src="img/system-sq.jpg"/>
+    <img style="height:100%; display:inline-block" src="img/gametank_front.png"/>
     <div style="position: absolute; top: 5%; left: 10%;">
     <span style="font-size:2vw; font-family: 'Manifestly', sans-serif;">Introducing the</span><br>
     <span style="font-size: 5vw; font-family:'DePixel', sans-serif;">GAMETANK</span>
