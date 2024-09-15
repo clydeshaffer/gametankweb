@@ -6,7 +6,7 @@
 <h1>Video RAM DMA</h1>
 <h2>Copying pixels but like, really fast</h2>
 <center>
-    <img width="500" src="img/vdma/tshell32_161.gif">
+    <img width="500" src="/img/vdma/tshell32_161.gif">
 </center>
 
 <p>

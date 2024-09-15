@@ -6,7 +6,7 @@
 <h1>GameTank Motherboard</h1>
 <h2>System bus and memory map</h2>
 <center>
-    <img width="500" src="img/motherboard/cpu.jpg">
+    <img width="500" src="/img/motherboard/cpu.jpg">
 </center>
 
 <p>
@@ -40,7 +40,7 @@ executing code when an interrupt is triggered or a system reset has completed. I
 will not behave predictably or even be particularly useful.
 </p>
 <center>
-    <img width="500" src="img/motherboard/sketch.png">
+    <img width="500" src="/img/motherboard/sketch.png">
 </center>
 <p>
 Rather than arbitrarily pick ranges of numbers to assign, it is typically easiest to work in halves. Starting from the highest bits of the address value,
@@ -76,6 +76,6 @@ to access this data. It is ideal for storing compressed graphics which can be ex
 accessed directly off of the SPI very often after that.
 </p>
 <center>
-    <img width="500" src="img/motherboard/mobo.jpg">
+    <img width="500" src="/img/motherboard/mobo.jpg">
 </center>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>

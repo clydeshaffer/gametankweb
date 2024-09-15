@@ -6,7 +6,7 @@
 <h1>Generating Color Video</h1>
 <h2>How the colorburst was wrangled</h2>
 <center>
-    <img width="500" src="img/color_vid/grid.jpeg">
+    <img width="500" src="/img/color_vid/grid.jpeg">
 </center>
 
 <p>
@@ -66,7 +66,7 @@ that determines whether the color of a given part of the output image is red, or
     it was relatively straightforward to generate eight distinct phases using this approach.
 </p>
 <center>
-    <img width="500" src="img/color_vid/hue_select.png">
+    <img width="500" src="/img/color_vid/hue_select.png">
 </center>
 <p>
     With this handled, the rest was a bit easier. I'd use 2:1 multiplexers controlled by different blanking lines of the video generator, which would
@@ -100,7 +100,7 @@ that determines whether the color of a given part of the output image is red, or
     bytes deleted, could then be dropped into a ROM binary to be used by the console without any other modification.
 </p>
 <center>
-    <img width="500" src="img/color_vid/smudge.jpeg">
+    <img width="500" src="/img/color_vid/smudge.jpeg">
 </center>
 <p>
     For NTSC video: the sync level is expected to be around 0v, the black level around 0.4v, and the brightest part of an image around 1v. The colorburst
@@ -113,6 +113,6 @@ that determines whether the color of a given part of the output image is red, or
     different capacitor values on the breadboard I was able to settle on a frequency response that included the colorburst but not the smearing.
 </p>
 <center>
-    <img width="500" src="img/color_vid/breadboard.jpg">
+    <img width="500" src="/img/color_vid/breadboard.jpg">
 </center>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>

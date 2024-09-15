@@ -6,7 +6,7 @@
 <h1>Reading controller inputs</h1>
 <h2>Finally some buttons to press</h2>
 <center>
-    <img width="500" src="img/input/controller.jpeg">
+    <img width="500" src="/img/input/controller.jpeg">
 </center>
 
 <p>
@@ -18,7 +18,7 @@
 </p>
 
 <center>
-    <img width="500" src="img/input/schematic.png">
+    <img width="500" src="/img/input/schematic.png">
 </center>
 
 <p>
@@ -35,7 +35,7 @@
     resets the select state of the other port. So when reading port A, the software should begin by reading port B to reset it.
 </p>
 <center>
-    <img width="500" src="img/input/board.jpeg">
+    <img width="500" src="/img/input/board.jpeg">
 </center>
 <p>
     The Gametank's controller design is meant to be robust, simple to assemble, relatively easy to 3D print, and moderately comfortable. Somewhat unusual

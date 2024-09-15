@@ -37,8 +37,8 @@ asynchronous vs synchronous reloads would be. The latest version of the Blitter 
 accomplished by passing the G.RAM coordinates through a pair of inverting/noninverting buffers which will act to reverse the drawn image orientation.
 </p>
 <center>
-    <img width="500" src="img/v2/V2-mobo.JPG">
-    <img width="500" src="img/v2/V2-graphics.JPG">
+    <img width="500" src="/img/v2/V2-mobo.JPG">
+    <img width="500" src="/img/v2/V2-graphics.JPG">
 </center>
 
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>
