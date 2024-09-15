@@ -6,7 +6,7 @@
 <h1>GameTank Audio Subsystem</h1>
 <h2>Beep Beep Boop Boop</h2>
 <center>
-    <img width="500" src="../img/sound/card.jpg">
+    <img width="500" src="img/sound/card.jpg">
 </center>
 <h3>Overview</h3>
 <p>

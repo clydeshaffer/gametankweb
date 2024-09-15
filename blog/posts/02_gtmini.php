@@ -6,7 +6,7 @@
 <h1>How Will The Cartridges Work?</h1>
 <h2>and why's it called the GameTank?</h2>
 <center>
-    <img width="500" src="../img/gt_mini/gt_mini_running.jpeg">
+    <img width="500" src="img/gt_mini/gt_mini_running.jpeg">
 </center>
 
 <p>
@@ -113,8 +113,8 @@
 </p>
 
 <center>
-    <img width="500" src="../img/gt_mini/cart.jpeg">
-    <img width="500" src="../img/cart-prog.jpeg">
+    <img width="500" src="img/gt_mini/cart.jpeg">
+    <img width="500" src="img/cart-prog.jpeg">
 </center>
 
 <p>
@@ -124,7 +124,7 @@
 </p>
 
 <center>
-    <img width="500" src="../img/gt_mini/gt_mini_box.PNG">
+    <img width="500" src="img/gt_mini/gt_mini_box.PNG">
 </center>
 
 <p>
@@ -132,7 +132,7 @@
 </p>
 
 <center>
-    <img width="500" src="../img/gt_mini/gt_mini_model.PNG">
+    <img width="500" src="img/gt_mini/gt_mini_model.PNG">
 </center>
 
 <p>
@@ -140,8 +140,8 @@
 </p>
 
 <center>
-    <img width="500" src="../img/gt_mini/gt_mini.jpeg">
-    <img width="500" src="../img/gt_mini/gt_mini_open.jpeg">
+    <img width="500" src="img/gt_mini/gt_mini.jpeg">
+    <img width="500" src="img/gt_mini/gt_mini_open.jpeg">
 </center>
 
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>

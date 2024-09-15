@@ -6,7 +6,7 @@
 <h1>Graphics, Part 1</h1>
 <h2>Generating a black-and-white video signal for analog TVs</h2>
 <center>
-    <img width="500" src="../img/bw_vid/face.jpeg">
+    <img width="500" src="img/bw_vid/face.jpeg">
 </center>
 
 
@@ -29,7 +29,7 @@
     the circuit's architechture and the requirements of the video signal that taught me what I needed to know to start experimenting.
 </p>
 <center>
-    <img width="500" src="../img/bw_vid/breadboard.jpeg">
+    <img width="500" src="img/bw_vid/breadboard.jpeg">
 </center>
 <p>
     The television expects to receive 262.5 scanlines 60 times per second. To generate this, a "clock" is used that produces a high frequency square wave
@@ -60,9 +60,9 @@
     over and over, in rapid succession.
 </p>
 <center>
-    <img width="500" src="../img/bw_vid/cat.jpeg">
-    <img width="500" src="../img/bw_vid/mac.jpeg">
-    <img width="500" src="../img/bw_vid/text.jpeg">
+    <img width="500" src="img/bw_vid/cat.jpeg">
+    <img width="500" src="img/bw_vid/mac.jpeg">
+    <img width="500" src="img/bw_vid/text.jpeg">
 </center>
 <p>
     While my eventual video card design for the GameTank would use a whole byte to represent each pixel, this prototype would efficiently pack eight pixels
@@ -78,8 +78,8 @@
     program for directly editing the bytes of a file as hexadecimal numbers) to quickly scale down, clean up, and burn image files to the ROM chip.
 </p>
 <center>
-    <img width="500" src="../img/bw_vid/hams_board.jpeg">
-    <img width="500" src="../img/bw_vid/hams_print.jpeg">
+    <img width="500" src="img/bw_vid/hams_board.jpeg">
+    <img width="500" src="img/bw_vid/hams_print.jpeg">
 </center>
 <p>
     I'd found that my process for converting images to black and white was also useful for adding images to the screenprinting on printed circuit boards.
@@ -92,6 +92,6 @@
     and far outside commonly accepted comedic timing are the running theme in most of my works.
 </p>
 <center>
-    <img width="500" src="../img/hams.jpg">
+    <img width="500" src="img/hams.jpg">
 </center>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/include/foot.php'?>

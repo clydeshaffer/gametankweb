@@ -10,7 +10,7 @@ A Stabilized Hardware Platform
 <p>
     August 3rd, 2022
 </p>
-<img width="500" src="../img/v3_1/uncased.jpg">
+<img width="500" src="img/v3_1/uncased.jpg">
 
 <h3> Electronics Changes </h3>
 

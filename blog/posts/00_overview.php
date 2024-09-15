@@ -5,7 +5,7 @@
 
 <h1>Project Introduction</h1>
 
-<img width="500" src="../img/front_sm.jpg">
+<img width="500" src="img/front_sm.jpg">
 
 <h2>How did I get here?</h2>
 <p>

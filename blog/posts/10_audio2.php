@@ -20,7 +20,7 @@ Audio Coprocessor
 
 <p>But what if the little computer-within-the-computer was equally as powerful? This seemed fine according to my completely arbitrary rubric, so I spun up a daughterboard design that simply used another 6502 to control a DAC.&nbsp;</p>
 
-<img width="500" src="../img/v2/V2-audio.jpg">
+<img width="500" src="img/v2/V2-audio.jpg">
 
 <p>The interface carried over from the old soundcard provides 7 memory-mapped selection signals, 4 kilobytes of memory access, and all four of the clock divisions used in the system. So it was relatively trivial to control the new Audio Coprocessor by loading programs into the dual-ported RAM and manipulating the RESET, READY, and NMI lines with the memory selection signals.</p>
 
