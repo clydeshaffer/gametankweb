@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Parser</title>
+</head>
+<body>
+    <h2>Subscription Data Input</h2>
+    <textarea id="inputArea" rows="10" cols="80" placeholder="Enter subscription data here..."></textarea><br><br>
+    <label for="password">Password: </label>
+    <input type="password" id="password"><br><br>
+    <button onclick="submitData()">Submit Data</button>
+
+    <h3>Response from Server</h3>
+    <pre id="outputArea"></pre>
+
+    <script>
+        function parseInput() {
+            // Get the input data from the textarea
+            const input = document.getElementById('inputArea').value.trim();
+
+            // Define the bitmask values for each preference string
+            const preferenceMap = {
+                "Announcements when new products are added": 1,  // 0001
+                "Newsletter about latest developments related to the GameTank": 2  // 0010
+            };
+
+            // Split the input into lines and process each line
+            const lines = input.split('\n');
+            const subscriptions = [];
+
+            for (let line of lines) {
+                // Split the line into email and preferences part
+                const [email, preferencesString] = line.split('\t');
+
+                if (!email) {
+                    continue;  // Skip empty lines
+                }
+
+                // Initialize the bitmask
+                let preferencesBitmask = 0;
+
+                if (preferencesString) {
+                    // Split the preferences part into individual strings
+                    const preferencesArray = preferencesString.split(',').map(pref => pref.trim());
+
+                    // Calculate the bitmask by summing the corresponding values
+                    for (let pref of preferencesArray) {
+                        if (preferenceMap[pref] !== undefined) {
+                            preferencesBitmask |= preferenceMap[pref];
+                        }
+                    }
+                }
+
+                // Create the subscription object
+                subscriptions.push({
+                    email: email.trim(),
+                    preferences: preferencesBitmask
+                });
+            }
+
+            // Return the resulting JSON object
+            return { subscriptions: subscriptions };
+        }
+
+        function getCurrentTimeRoundedToNearestTenMinutes() {
+            // Get the current time in milliseconds and round it to the nearest 10 minutes (600,000 ms)
+            const currentTimeInMilliseconds = Math.round(Date.now() / 600000) * 600000;
+            return currentTimeInMilliseconds;
+        }
+
+        async function generateKey(password) {
+            // Get the current time rounded to the nearest 10 minutes
+            const roundedTime = getCurrentTimeRoundedToNearestTenMinutes();
+
+            // Concatenate the password and the rounded time
+            const combinedString = password + roundedTime;
+
+            // Convert the combined string to an ArrayBuffer
+            const encoder = new TextEncoder();
+            const data = encoder.encode(combinedString);
+
+            // Generate the SHA-256 hash
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+            // Convert the hash to a hexadecimal string
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+            return hashHex;
+        }
+
+        async function submitData() {
+            const password = document.getElementById('password').value;
+            const parsedJson = parseInput();
+
+            if (!password) {
+                alert('Please enter the password.');
+                return;
+            }
+
+            try {
+                // Generate the key based on the password and current time
+                const key = await generateKey(password);
+
+                // Prepare the data for submission
+                const formData = new URLSearchParams();
+                formData.append('data', JSON.stringify(parsedJson));
+                formData.append('key', key);
+
+                // Send the data to the PHP endpoint using fetch
+                const response = await fetch('injest_emails.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: formData.toString()
+                });
+
+                // Display the server response
+                const responseText = await response.text();
+                document.getElementById('outputArea').textContent = responseText;
+            } catch (error) {
+                document.getElementById('outputArea').textContent = 'An error occurred: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
+

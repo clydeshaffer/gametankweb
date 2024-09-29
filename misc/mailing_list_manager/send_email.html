@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <style>
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <h2>Send HTML Email</h2>
+    <form id="emailForm">
+        <label for="subject">Email Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="content">Email Content:</label><br>
+        <textarea id="content" name="content" rows="10" cols="80" required></textarea><br><br>
+
+        <label>Email Type:</label><br>
+        <input type="radio" name="email_type" value="1" required> Announcements when new products are added<br>
+        <input type="radio" name="email_type" value="2" required> Newsletter about latest developments related to the GameTank<br>
+        <input type="radio" name="email_type" value="0" required> Restock notification<br><br>
+
+        <label for="password">MAILAPIKEY:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Send Email</button>
+    </form>
+
+    <div id="response"></div> <!-- Div to display response -->
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Prepare form data
+            const subject = document.getElementById('subject').value;
+            const content = document.getElementById('content').value;
+            const emailType = document.querySelector('input[name="email_type"]:checked').value;
+            const mailApiKey = document.getElementById('password').value; // Get API key from password field
+
+            // Get the current UTC time in milliseconds
+            const currentTimeInMilliseconds = Math.round(Date.now());
+
+            // Round to the nearest 10 minutes (600,000 milliseconds)
+            const roundedTimeInMilliseconds = Math.round(currentTimeInMilliseconds / 600000) * 600000;
+
+            // Concatenate the API key and rounded time
+            const expectedString = mailApiKey + roundedTimeInMilliseconds;
+
+            // Calculate the SHA256 hash of the concatenated string
+            sha256(expectedString).then(hash => {
+                // Prepare data to send
+                const data = {
+                    subject: subject,
+                    content: content,
+                    email_type: emailType,
+                    password: hash
+                };
+
+                // Send data using fetch
+                fetch('send_email.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .then(data => {
+                    // Display the response from the server
+                    const responseDiv = document.getElementById('response');
+                    responseDiv.style.display = 'block'; // Show the response div
+                    responseDiv.textContent = 'Success: ' + data.message; // Update with success message
+                })
+                .catch(error => {
+                    // Display error message from the server
+                    const responseDiv = document.getElementById('response');
+                    responseDiv.style.display = 'block'; // Show the response div
+                    responseDiv.textContent = 'Error: ' + error.message; // Update with error message
+                });
+            });
+        });
+
+        // SHA256 hashing function (you can use a library like jsSHA or similar)
+        function sha256(ascii) {
+            return crypto.subtle.digest('SHA-256', new TextEncoder().encode(ascii))
+                .then(hashBuffer => {
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+                });
+        }
+    </script>
+</body>
+</html>
+
