@@ -94,47 +94,6 @@
         <img src="embed_options.png" width="500"/>
         <p>"Embed in page" and "Manually set size" should be selected, with a viewport of 512px by 512px. (Currently the web emulator assumes this size)</p>
     </div>
-
-    <script>
-        function uploadFile() {
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const base64String = e.target.result.split(',')[1];
-
-                    // Create a FormData object to send the file content
-                    const formData = new FormData();
-                    formData.append('romfile', base64String);
-
-                    // Send a POST request to the bundler.php file
-                    fetch('bundler.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.blob())
-                    .then(blob => {
-                        // Extract the filename without extension
-                        const filenameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
-
-                        // Create a link element to trigger the download of the zip file
-                        const link = document.createElement('a');
-                        link.href = URL.createObjectURL(blob);
-                        link.download = `${filenameWithoutExtension}_web.zip`;
-                        link.click();
-                    })
-                    .catch(error => console.error('Error:', error));
-                };
-
-                // Read the file as a data URL
-                reader.readAsDataURL(file);
-            } else {
-                alert('Please choose a file to upload.');
-            }
-        }
-    </script>
 </body>
         </html>
     HTML;
