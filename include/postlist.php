@@ -1,31 +1,27 @@
 <?php
 		function makePostBox($filename, $dir) {
-			$f = fopen($dir . "/" . $filename, 'r');
-			$line = trim(fgets($f));
-			$metadata = [];
-			while(substr($line, 0, 4) === "<!--") {
+			$path = $dir . "/" . $filename;
+			$f = fopen($path, 'r');
+			$content = fread($f, filesize($path));
+
+			$metadata = [
+			    "title" => $filename,
+			    "thumb" => "/img/whomst.jpg",
+			    "link" => $path,
+			];
+
+			foreach(explode(PHP_EOL, $content) as $line) {
+				if(substr($line, 0, 4) !== "<!--") continue;
+
 				$info = explode("=", substr($line, 4, -4));
-				$field = $info[0];
-				array_shift($info);
-				$value = implode("=", $info);
-				$line = trim(fgets($f));
-				$metadata[trim($field)] = trim($value);
-			}
+				$val = join("=", array_slice($info, 1));
 
-			if(!$metadata["title"]) {
-				$metadata["title"] = $filename;
-			}
-
-			if(!$metadata["thumb"]) {
-				$metadata["thumb"] = "/img/face-only.png";
+				$metadata[trim($info[0])] = trim($val);
 			}
 
 			$th = $metadata["thumb"];
 			$t = $metadata["title"];
-			$link = $dir . "/" . $filename;
-			if($metadata["link"]) {
-				$link = $metadata["link"];
-			}
+			$link = $metadata["link"];
 
 			echo "
 			<a href='$link'>
