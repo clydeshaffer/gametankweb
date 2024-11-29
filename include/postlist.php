@@ -14,6 +14,8 @@
 				if(substr($line, 0, 4) !== "<!--") continue;
 
 				$info = explode("=", substr($line, 4, -4));
+				if(count($info) < 2) continue;
+				
 				$val = join("=", array_slice($info, 1));
 
 				$metadata[trim($info[0])] = trim($val);
