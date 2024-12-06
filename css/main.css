@@ -55,6 +55,43 @@ body {
 
 li+ul {padding-left: 20px;}
 
+.game-gallery .gallery {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: start;
+    flex-wrap: wrap;
+    max-width: 1240px;
+    gap: 16px;
+}
+
+.game-gallery .gallery .game {
+    width: 400px;
+    margin: 0;
+    border: 1px solid #777;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    box-shadow: 4px 4px 0px 0px #351ea6;
+}
+
+.game-gallery .gallery .game img {
+    width: 100%;
+    height: 384px;
+    object-fit: cover;
+}
+
+.game-gallery .gallery .game .details .title {
+    font-size: 22px;
+    text-align: center;
+}
+
+.game-gallery .gallery a,
+.game-gallery .gallery a:visited {
+    color: #351ea6;
+}
+
 .gallery{
     display: flex;
     width: 90%;
