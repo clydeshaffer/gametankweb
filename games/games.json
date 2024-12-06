@@ -1,0 +1,44 @@
+{
+    "games": [
+	{
+	    "title": "Cubicle Knight",
+	    "thumb": "/games/img/screenshots/cubicle.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=cubicle.gtr"
+	},
+	{
+	    "title": "Bad Apple!",
+	    "thumb": "/games/img/screenshots/badapple.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=badapple.gtr"
+	},
+	{
+	    "title": "Tetris",
+	    "thumb": "/games/img/screenshots/tetris.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=tetris.gtr"
+	},
+	{
+	    "title": "Accursed Fiend",
+	    "thumb": "/games/img/screenshots/fiend.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=fiend.gtr"
+	},
+	{
+	    "title": "Tanks!",
+	    "thumb": "/games/img/screenshots/tanks.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=tanks.gtr"
+	},
+	{
+	    "title": "Bob's Barrels",
+	    "thumb": "/games/img/screenshots/barrels.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=barrels.gtr"
+	},
+	{
+	    "title": "Word Guess Game",
+	    "thumb": "/games/img/screenshots/words.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=words.gtr"
+	},
+	{
+	    "title": "Arcade Multi Pack",
+	    "thumb": "/games/img/screenshots/multi1.png",
+	    "link": "https://clydeshaffer.com/builds/GameTankEmulator/wasm/?rom=multi.gtr"
+	}
+    ]
+}
