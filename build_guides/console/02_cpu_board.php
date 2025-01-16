@@ -182,8 +182,7 @@
             '../img/cpu_board/annotated/025_molex_power_switch.jpg',
     ));
 
-    buildstep('Mount Power Board', '../img/cpu_board/annotated/026_molex_reset.jpg',
-            '../img/cpu_board/annotated/027_molex_reset_detail.jpg',
+    buildstep('Mount Power Board',
         array(
             '1 x Power Board (assembled with separate instructions)',
             '2 x trimmed resistor leads from earlier',
