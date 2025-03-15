@@ -23,14 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
 
         if ($statement->rowCount() > 0) {
-            $statement->bind_result($id, $passhash, $handle);
-            if($statement->fetch()) {
-                if(password_verify($_['password'], $passhash)) {
+            if($row = $statement->fetch()) {
+                if(password_verify($_['password'], $row['passhash'])) {
                     http_response_code(200);
                     echo json_encode(['status' => 'success', 'message' => 'Logged in successfully']);
 
-                    $_SESSION["user"] = $id;
-                    $_SESSION["myhandle"] = $handle;
+                    $_SESSION["user"] = $row['userID'];
+                    $_SESSION["myhandle"] = $row['handle'];
                     $_SESSION["start_time"] = time();
 
                     exit();
