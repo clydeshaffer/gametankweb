@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(200);
     echo json_encode(['status' => 'success', 'message' => 'Logged out successfully']);
 } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    <form action="logout.php" style="border:1px solid #ccc">
+   ?>
+
+<form action="logout.php" style="border:1px solid #ccc">
   <div class="container">
     <h1>Log out?</h1>
 
@@ -18,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 </form>
+
+<?php
 }
 
 ?>
