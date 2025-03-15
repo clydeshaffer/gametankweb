@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit('Passwords did not match');
     }
 
-    $db = get_db("games")
+    $db = get_db("games");
 
-    $sql = 'SELECT * from users where handle = ":handle"'
+    $sql = 'SELECT * from users where handle = ":handle"';
 
-    $statement = $db->prepare($sql)
+    $statement = $db->prepare($sql);
 
     try {
         $statement->execute([

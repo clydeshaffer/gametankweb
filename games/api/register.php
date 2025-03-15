@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit('Passwords did not match');
     }
 
-    $db = get_db("games")
+    $db = get_db("games");
 
-    $sql = "INSERT into users (displayName, handle, passhash) values (:displayName, :handle, :passhash)"
+    $sql = "INSERT into users (displayName, handle, passhash) values (:displayName, :handle, :passhash)";
 
-    $statement = $db->prepare($sql)
+    $statement = $db->prepare($sql);
 
     $hash = password_hash($_POST['password']);
 
