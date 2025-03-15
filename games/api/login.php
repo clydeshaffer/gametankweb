@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = get_db("games");
 
-    $sql = 'SELECT * from users where handle = ":handle"';
+    $sql = 'SELECT * from users where handle = :handle';
 
     $statement = $db->prepare($sql);
 
