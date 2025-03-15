@@ -1,11 +1,10 @@
 <?php
-// Database connection parameters from environment variables
-$host = 'localhost';  // Adjust if necessary
-$username = getenv('TACTICS_SQL_USER');
-$password = getenv('TACTICS_SQL_PASS');
-
 
 function get_db($dbname) {
+    // Database connection parameters from environment variables
+    $host = '127.0.0.1';  // Adjust if necessary
+    $username = getenv('TACTICS_SQL_USER');
+    $password = getenv('TACTICS_SQL_PASS');
 
     // Check if environment variables are set
     if ($username === false || $password === false) {
