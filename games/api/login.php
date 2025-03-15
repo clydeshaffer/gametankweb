@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
 
         if ($statement->rowCount() > 0) {
+            $result = $statement->get_result();
             if($row = $result->fetch_assoc()) {
                 if(password_verify($_['password'], $row["passhash"])) {
                     http_response_code(200);
