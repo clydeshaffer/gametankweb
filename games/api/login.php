@@ -11,11 +11,6 @@ if (isset($_SESSION['user'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if($_POST['password'] != $_POST['password-repeat']) {
-        http_response_code(400);
-        exit('Passwords did not match');
-    }
-
     $db = get_db("games");
 
     $sql = 'SELECT * from users where handle = ":handle"';
