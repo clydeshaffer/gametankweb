@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $statement = $db->prepare($sql);
 
-    $hash = password_hash($_POST['password']);
+    $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
     try {
         $statement->execute([
