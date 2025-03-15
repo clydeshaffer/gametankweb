@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = get_db("games");
 
-    $sql = 'SELECT * from users where handle = :handle';
+    $sql = 'SELECT userID, passhash, handle from users where handle = :handle';
 
     $statement = $db->prepare($sql);
 
@@ -23,13 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
 
         if ($statement->rowCount() > 0) {
-            $result = $statement->get_result();
-            if($row = $result->fetch_assoc()) {
-                if(password_verify($_['password'], $row["passhash"])) {
+            $statement->bind_result($id, $passhash, $handle);
+            if($statement->fetch()) {
+                if(password_verify($_['password'], $passhash)) {
                     http_response_code(200);
                     echo json_encode(['status' => 'success', 'message' => 'Logged in successfully']);
 
-                    $_SESSION["user"] = $row['userID'];
+                    $_SESSION["user"] = $id;
+                    $_SESSION["myhandle"] = $handle;
                     $_SESSION["start_time"] = time();
 
                     exit();
