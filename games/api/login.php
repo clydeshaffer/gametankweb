@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($statement->rowCount() > 0) {
             if($row = $statement->fetch()) {
-                if(password_verify($_['password'], $row['passhash'])) {
+                if(password_verify($_POST['password'], $row['passhash'])) {
                     http_response_code(200);
                     echo json_encode(['status' => 'success', 'message' => 'Logged in successfully']);
 
