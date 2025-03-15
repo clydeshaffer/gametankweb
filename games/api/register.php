@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else if($_SERVER["REQUEST_METHOD"] == "GET") {
     ?>
 
-<form action="register.php" style="border:1px solid #ccc">
+<form action="register.php" style="border:1px solid #ccc" method="post">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>

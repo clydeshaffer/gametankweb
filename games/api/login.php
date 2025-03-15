@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else if($_SERVER["REQUEST_METHOD"] == "GET") {
     ?>
 
-<form action="login.php" style="border:1px solid #ccc">
+<form action="login.php" style="border:1px solid #ccc" method="post">
   <div class="container">
     <h1>Log In</h1>
     <hr>
