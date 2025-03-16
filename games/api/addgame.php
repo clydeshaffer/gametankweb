@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode(['status' => 'ok', 'url' => generatePresignedUrl('gametankgames', 'nyc3', $romfileKey), 'id' => $id]);
         } catch (PDOException $e) {
             http_response_code(500);
+            exit('IDK something went sideways: ' . $e->getMessage());
         }
     
 
