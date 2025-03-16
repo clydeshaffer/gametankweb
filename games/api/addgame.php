@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         try {
             $db = get_db("games");
-            $sql = 'INSERT INTO games (title, author) values (:title, :author)';
+            $sql = 'INSERT INTO games (title, author, visibility) values (:title, :author, 0)';
             $statement = $db->prepare($sql);
             $statement->execute([
               ":title" => $_POST['title'],
