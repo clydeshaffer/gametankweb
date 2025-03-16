@@ -24,9 +24,6 @@ if(isset($_SESSION["user"])) {
                 }
             }
         }
-
-
-        header("Location: https://gametank.zone/emulator/web/?game=" . $_POST["id"]);
     } catch (PDOException $e) {
     }
 } else {
