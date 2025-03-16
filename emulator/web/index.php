@@ -57,7 +57,7 @@ if(isset($_GET['game'])) {
 }
 
 echo "<title>$pagetitle</title>";
-echo $editstyle
+echo $editstyle;
 
 readfile("./index.html")
 ?>
