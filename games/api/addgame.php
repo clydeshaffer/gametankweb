@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
 ?>
 
-<input id="RomFileInput" type="file" onchange="async() => useFileInput(this);" style="display: none"/>
+<input id="RomFileInput" type="file" onchange="useFileInput(this);" style="display: none"/>
 <input type="button" id="loadimg" value="Upload ROM" onclick="document.getElementById('RomFileInput').click();" />
 
 <script>
