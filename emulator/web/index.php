@@ -1,6 +1,24 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
 <?php
 include '../../include/db.php';
 $pagetitle = "GameTank Emulator - WASM Edition";
+
+$editstyle = '''
+<style>
+.editonly {
+display: none;
+}
+</style>
+''';
+
+session_start();
+
 if(isset($_GET['game'])) {
   try {
       $db = get_db("games");
@@ -17,6 +35,20 @@ if(isset($_GET['game'])) {
               $link = "https://gametank.zone/emulator/web?game=$id";
               $img = "https://gametankgames.nyc3.cdn.digitaloceanspaces.com/games/phpapi/$id/mainimg.png";
               $pagetitle = 'GameTank Emulator - ' . $title;
+              $author = $row['author'];
+              $visibility = $row['visibility'];
+              $description = $row['description'];
+
+              if(isset($_SESSION["user"]) && ($_SESSION["user"] == $author)) {
+                echo "<script>var GAMEINFO = { title : \"$title\", id : $id, visibility : $visibility, description : \"$description\" };</script>";
+                $editstyle = '''
+<style>
+.editonly {
+display: block;
+}
+</style>
+''';
+              }
           }
       }
       http_response_code(200);
@@ -24,15 +56,8 @@ if(isset($_GET['game'])) {
   }
 }
 
-?>
-
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<?php
 echo "<title>$pagetitle</title>";
+echo $editstyle
+
 readfile("./index.html")
 ?>

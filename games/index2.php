@@ -11,7 +11,7 @@ include '../include/db.php';
 
 $db = get_db("games");
 
-$sql = 'SELECT* from games';
+$sql = 'SELECT* from games where visibility=1';
 
 $statement = $db->prepare($sql);
 try {
