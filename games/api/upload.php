@@ -6,6 +6,7 @@ function generatePresignedUrl($spaceName, $region, $fileKey, $expiry = 900) {
     $endpoint = "https://{$host}";
     $method = "PUT"; // For upload
     $contentType = "application/octet-stream"; // Change based on file type
+    $acl = "public-read"
 
     $algorithm = "AWS4-HMAC-SHA256";
     $service = "s3";
@@ -13,7 +14,7 @@ function generatePresignedUrl($spaceName, $region, $fileKey, $expiry = 900) {
     $timestamp = gmdate('Ymd\THis\Z');
     $credentialScope = "{$date}/{$region}/{$service}/aws4_request";
 
-    $signedHeaders = "host";
+    $signedHeaders = "host;x-amz-acl";
     $canonicalQuery = http_build_query([
         'X-Amz-Algorithm' => $algorithm,
         'X-Amz-Credential' => "{$key}/{$credentialScope}",
@@ -22,11 +23,13 @@ function generatePresignedUrl($spaceName, $region, $fileKey, $expiry = 900) {
         'X-Amz-SignedHeaders' => $signedHeaders,
     ], '', '&', PHP_QUERY_RFC3986);
 
+    $canonicalHeaders = "host:{$host}\nx-amz-acl:{$acl}\n";
+
     $canonicalRequest = implode("\n", [
         $method,
         "/{$fileKey}",
         $canonicalQuery,
-        "host:{$host}\n",
+        $canonicalHeaders,
         $signedHeaders,
         "UNSIGNED-PAYLOAD"
     ]);
