@@ -9,13 +9,13 @@
 include '../../include/db.php';
 $pagetitle = "GameTank Emulator - WASM Edition";
 
-$editstyle = '''
+$editstyle = <<<EOD
 <style>
 .editonly {
 display: none;
 }
 </style>
-''';
+EOD;
 
 session_start();
 
@@ -41,13 +41,13 @@ if(isset($_GET['game'])) {
 
               if(isset($_SESSION["user"]) && ($_SESSION["user"] == $author)) {
                 echo "<script>var GAMEINFO = { title : \"$title\", id : $id, visibility : $visibility, description : \"$description\" };</script>";
-                $editstyle = '''
-<style>
-.editonly {
-display: block;
-}
-</style>
-''';
+                $editstyle = <<<EOD
+                <style>
+                .editonly {
+                display: block;
+                }
+                </style>
+                EOD;
               }
           }
       }
