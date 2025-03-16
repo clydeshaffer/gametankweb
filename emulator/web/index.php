@@ -1,6 +1,6 @@
 <?php
 include '/include/db.php';
-$pagetitle = "GameTank Emulator - WASM Edition"
+$pagetitle = "GameTank Emulator - WASM Edition";
 if(isset($_GET['game'])) {
   $db = get_db("games");
   $sql = 'SELECT * from games where gameID = :id';
