@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           var file = fileInput.files[0];
           console.log("loading file " + file.name);
           var fr = new FileReader();
-          fr.onload = function () {
+          fr.onload = async function () {
               var data = new Uint8Array(fr.result);
               
               const response = await fetch('addgame.php', {
