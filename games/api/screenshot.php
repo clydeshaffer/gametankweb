@@ -18,7 +18,7 @@ if(isset($_SESSION["user"])) {
             if($row = $statement->fetch()) {
                 if($row['author'] == $_SESSION['user']) {
                     http_response_code(200);
-                    $screenshotKey = 'games/phpapi/' . $row['gameID'];
+                    $screenshotKey = 'games/phpapi/' . $row['gameID'] . '/mainimg.png';
                     header('Content-Type: application/json; charset=utf-8');
                     echo json_encode(['status' => 'ok', 'url' => generatePresignedUrl('gametankgames', 'nyc3', $screenshotKey)]);
                 }
