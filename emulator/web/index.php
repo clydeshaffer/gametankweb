@@ -33,6 +33,6 @@ if(isset($_GET['game'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <?php
-echo "<title>$pagetitle</title>"
+echo "<title>$pagetitle</title>";
 readfile("./index.html")
 ?>
