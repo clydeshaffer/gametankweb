@@ -1,5 +1,5 @@
 <?php
-include '../include/db.php';
+include '../../include/db.php';
 $pagetitle = "GameTank Emulator - WASM Edition";
 if(isset($_GET['game'])) {
   try {
