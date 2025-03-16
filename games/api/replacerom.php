@@ -18,7 +18,7 @@ if(isset($_SESSION["user"])) {
             if($row = $statement->fetch()) {
                 if($row['author'] == $_SESSION['user']) {
                     http_response_code(200);
-                    $romfileKey = 'games/phpapi/' . $id . '/game.gtr';
+                    $romfileKey = 'games/phpapi/' . $row['gameID'] . '/game.gtr';
                     header('Content-Type: application/json; charset=utf-8');
                     echo json_encode(['status' => 'ok', 'url' => generatePresignedUrl('gametankgames', 'nyc3', $romfileKey)]);
                 }
