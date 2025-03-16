@@ -6,7 +6,7 @@ function generatePresignedUrl($spaceName, $region, $fileKey, $expiry = 900) {
     $endpoint = "https://{$host}";
     $method = "PUT"; // For upload
     $contentType = "application/octet-stream"; // Change based on file type
-    $acl = "public-read"
+    $acl = "public-read";
 
     $algorithm = "AWS4-HMAC-SHA256";
     $service = "s3";
