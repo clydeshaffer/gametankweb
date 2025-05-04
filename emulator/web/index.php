@@ -57,6 +57,15 @@ if(isset($_GET['game'])) {
 }
 
 echo "<title>$pagetitle</title>";
+
+echo "<meta content=\"$pagetitle\" property=\"og:title\">";
+if(isset($img)) {
+  echo "<meta content='$img' property='og:image'>";
+}
+echo "<meta content=\"GameTank Web Emulator\" property=\"og:site_name\">";
+if(isset($description)) {
+  echo "<meta content=\"$description\" property=\"og:description\">";
+}
 echo $editstyle;
 
 readfile("./index.html")
