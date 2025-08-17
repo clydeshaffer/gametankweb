@@ -13,6 +13,7 @@
     <a href="https://github.com/clydeshaffer/gametankemulator">Emulator Repo</a>
     <br>
     <a href="https://github.com/clydeshaffer/gametank_sdk">C SDK</a>
+    <a href="https://github.com/dwbrite/gametank-rust">Rust SDK</a>
     <br>
     <a href="https://youtube.gametank.zone">Youtube</a>
     <br>
