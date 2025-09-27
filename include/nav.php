@@ -18,4 +18,5 @@
     <a href="https://youtube.gametank.zone">Youtube</a>
     <br>
     <a href="https://swag.gametank.zone/">The GameTank Store</a>
+    <a href="https://www.crowdsupply.com/clydeware/gametank">Crowd Supply</a>
 </div>

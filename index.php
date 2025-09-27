@@ -38,7 +38,7 @@
         <h2>The GameTank is an open source 8-bit retroconsole that YOU can build, and build games for.</h2>
     </center>
     <center>
-        <h2>...and now you can <a href="https://swag.gametank.zone/products/the-gametank">buy one</a> too!</h2>
+        <h2>Subscribe to the project on <a href="https://www.crowdsupply.com/clydeware/gametank">Crowd Supply</a> to find out when you can order prebuilt units!</h2>
     </center>
     <p>
         Similar in spirit to fantasy consoles like the Pico-8 or TIC-80, the GameTank is set apart by its implementation as a <em>physical hardware device first</em>,
