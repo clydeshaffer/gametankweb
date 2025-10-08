@@ -39,7 +39,7 @@ if(isset($_GET['game'])) {
               $visibility = $row['visibility'];
               $description = $row['description'];
 
-              echo "<script>var GAMEINFO = { title : \"$title\", id : $id, visibility : $visibility, description : \"$description\" }; var USER_CAN_EDIT = true;</script>";
+              echo "<script>var GAMEINFO = { title : \"$title\", id : $id, visibility : $visibility, description : " . json_encode($description) . " }; var USER_CAN_EDIT = true;</script>";
 
               if(isset($_SESSION["user"]) && ($_SESSION["user"] == $author)) {
                 $editstyle = <<<EOD
