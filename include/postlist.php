@@ -22,8 +22,9 @@
 
 			$th = $metadata["thumb"];
 			$t = $metadata["title"];
-			$link = $dir . "/" . $filename;
-			if($metadata["link"]) {
+			$path = parse_url($_SERVER['REQUEST_URI'])['path'];
+			$link = str_replace('//','/', $path . "/" . $dir . "/" . $filename);
+			if(isset($metadata["link"]) && $metadata["link"]) {
 				$link = $metadata["link"];
 			}
 
@@ -51,5 +52,4 @@
 			}
 			echo "</div>";
 		}
-	
 ?>
